@@ -22,3 +22,7 @@ Software: Rstudio, R
 
 
 ## Suspension Coil Summary
+
+- The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per inch. Does the current manufacturing data meet this design specification? Why or why not?
+
+# Independent Study
