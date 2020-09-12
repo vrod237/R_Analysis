@@ -31,10 +31,14 @@ Software: Rstudio, R
 
 ## Independent Study
 
-- Think critically about what metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.).
+Upper management is looking for your expertise and wants you to design a study that compares the performance of the MechaCar prototype vehicle to other comparable vehicles on the market.
 
+- First step would be to compare car characteristics that consumers care about such as: fuel efficiency, price, car size, and color options. In recent years, technology has also become a deciding factor in purchasing vehicles, safety features such as collision warnings, blind spot alert, emergency braking and rear/front traffic camera. There are other convenience options available at an extra price such a wi-fi, sound system, interior, rims and convertible.
 
-- Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical test could be used to test this hypothesis.
+- To determine the difference's between MechaCar and its competitors with similar vehicles, we can conduct a sample t-test for the numerical variables from MechaCar's sample and another sample from competitor vehicles. We can also conduct Chi-Square tests for the categorical variables from MechaCar's sample and another sample from competitor vehicles.
 
+- The null hypothesis would be: there is no difference between the metric of MechaCar and similar competitor vehicles.
 
-- Knowing what test should be used, what data should be collected? 
+- In order to test the hypothesis, we would need to gather the metrics proposed for MechaCar and the competitor vehicles. Some of this data will include: MPG, Price, Car Size, Color Options and possible promotions. Continuous numerical options
+
+Categorical variables
