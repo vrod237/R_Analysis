@@ -39,6 +39,4 @@ Upper management is looking for your expertise and wants you to design a study t
 
 - The null hypothesis would be: there is no difference between the metric of MechaCar and similar competitor vehicles.
 
-- In order to test the hypothesis, we would need to gather the metrics proposed for MechaCar and the competitor vehicles. Some of this data will include: MPG, Price, Car Size, Color Options and possible promotions. Continuous numerical options
-
-Categorical variables
+- In order to test the hypothesis, we would need to gather the metrics proposed for MechaCar and the competitor vehicles. Some of this data will include: MPG, Price, Car Size and Promotions, which are also know as continuous numerical variables. In addition to these, we would also need the various colors, service options, safety features and other convenient options; which are known as categorical variables.
