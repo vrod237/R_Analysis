@@ -1,0 +1,79 @@
+MPG Regression
+
+Hypotheses:
+Ho : The linear model slope is zero, or m = 0
+Ha : The linear model slope is not zero, or m ≠ 0
+
+Alpha-level: 0.05
+
+Shapiro-Wilk normality test
+data:  MechaCar_mpg$mpg
+W = 0.98536, p-value = 0.7869
+
+Correlation Coefficient Results:
+                     veh. length    veh. weight    mpg      spoiler angle    ground clearance
+vehicle length       1.00000000    -0.12271790  0.60947984    0.02577114      -0.31663112
+vehicle weight      -0.12271790     1.00000000  0.09068314   -0.11307851       0.08511338
+mpg                  0.60947984     0.09068314  1.00000000   -0.02083999       0.32874886
+spoiler angle        0.02577114    -0.11307851 -0.02083999    1.00000000      -0.21112057
+ground clearance    -0.31663112     0.08511338  0.32874886   -0.21112057       1.00000000
+
+
+Summary of Multiple Linear Model:
+Call: lm(mpg ~ `vehicle length` + `vehicle weight` + `ground clearance` + `spoiler angle`,
+  data = MechaCar_mpg)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.1766 -0.6975  0.0348  0.6520  4.0972 
+
+Coefficients:
+              Estimate      Std. Error    t value     Pr(>|t|)    
+(Intercept)   20.556354      0.542424     37.897     < 2e-16 ***
+hp            -0.018458      0.003359     -5.495    5.77e-06 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.282 on 30 degrees of freedom
+Multiple R-squared:  0.5016,	Adjusted R-squared:  0.485 
+F-statistic: 30.19 on 1 and 30 DF,  p-value: 5.766e-06
+
+The p-value is 5.766e-06 which is higher than our alpha level of 0.05, thus we accept our null hypothesis. The slope of the linear model is considered to be zero.
+
+The linear model doesn't predict mpg of MechaCar prototype effectively. Our R^2 value of 0.5016 means that 50.16% of the variation of the dependent variable can be explained by the independent varaibles in linear regression model.
+
+Suspension Coil Summary
+Mean_PSI   Median_PSI   Variance_PSI   Stdev_PSI
+1499.531    1499.747      76.23459      8.731242
+
+Manufacturing_Lot  Mean_PSI   Median_PSI    Variance_PSI    Stdev_PSI
+Lot1               1500.018    1500.206      1.146024       1.070525
+Lot2               1499.571    1498.873      10.131511      3.183003
+Lot3               1499.004    1497.981      220.010563	    14.832753
+
+MechaCar suspension coil design dictates that the variance of the suspension coils must not exceed 100 pounds per inch. From our, Suspension Coil Summary, the PSI Variance is 76.23459, which meets the design specification. However, when we look at each individual Manufactouring Lot, Manufactoring Lot 3 does not meet the deisgn specification, the PSI Variance is 220.010563, which is over the limit by ~120 PSI.
+
+Suspension Coil T-Test
+One Sample T-Test
+
+data:  suspension_coil$PSI
+t = -0.65784, df = 149, p-value = 0.5117
+alternative hypothesis: true mean is not equal to 1500
+95 percent confidence interval:
+ 1498.122 1500.940
+sample estimates:
+mean of x 
+ 1499.531 
+
+The p-value of 0.5117 is higher than the alpha level of 0.05, thus we failed to reject the null hypothesis, the true mean is equal to 1500.
+
+Independent Study
+
+First step would be to compare car characteristics that consumers care about such as: fuel efficiency, price, car size, and color options. In recent years, technology has also become a deciding factor in purchasing vehicles, safety features such as collision warnings, blind spot alert, emergency braking and rear/front traffic camera. There are other convenience options available at an extra price such a wi-fi, sound system, interior, rims and convertible.
+
+To determine the difference's between MechaCar and its competitors with similar vehicles, we can conduct a sample t-test for the numerical variables from MechaCar's sample and another sample from competitor vehicles. We can also conduct Chi-Square tests for the categorical variables from MechaCar's sample and another sample from competitor vehicles.
+
+The null hypothesis would be: there is no difference between the metric of MechaCar and similar competitor vehicles.
+
+In order to test the hypothesis, we would need to gather the metrics proposed for MechaCar and the competitor vehicles. Some of this data will include: MPG, Price, Car Size and Promotions, which are also know as continuous numerical variables. In addition to these, we would also need the various colors, service options, safety features and other convenient options; which are known as categorical variables.
